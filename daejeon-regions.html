@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>대전 지역별 과외 안내 - 대전 전과목 일대일 과외</title>
+<meta name="description" content="대전광역시 대덕구·동구·서구·유성구·중구 전 지역에서 일대일 맞춤 과외가 가능합니다." />
+<meta name="keywords" content="대전 과외, 대전 일대일 과외, 대전 수학과외, 대전 영어과외, 대전 국어과외, 대전 지역별 과외, 대전 방문과외, 대전 비대면과외" />
+<link rel="canonical" href="https://daejeon-tutoring.co.kr/daejeon-regions.html" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans KR', sans-serif; color: #1a1a1a; background: #fff; word-break: keep-all; }
+
+.navbar {
+  position: sticky; top: 0; z-index: 1000;
+  background: #fff; box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 32px;
+}
+.navbar-brand { display: flex; align-items: center; gap: 8px; font-weight: 700; color: #0D2B6B; font-size: 16px; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+.navbar-brand img { width: 26px; height: 26px; }
+.navbar-links { display: flex; align-items: center; gap: 20px; overflow-x: auto; flex: 1; min-width: 0; scrollbar-width: none; -ms-overflow-style: none; }
+.navbar-links::-webkit-scrollbar { display: none; }
+.navbar-links a.nav-link { color: #444; font-size: 14px; font-weight: 500; text-decoration: none; padding: 6px 2px; border-bottom: 2px solid transparent; white-space: nowrap; flex-shrink: 0; }
+.navbar-links a.nav-link:hover, .navbar-links a.nav-link.active { color: #0D2B6B; border-bottom-color: #FFB400; }
+.navbar-cta { background: #0D2B6B; color: #fff; font-size: 13px; font-weight: 700; padding: 9px 16px; border-radius: 20px; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+.navbar-cta:hover { background: #0a2054; }
+@media (max-width: 600px) {
+  .navbar { padding: 10px 16px; gap: 8px; }
+  .navbar-brand span { display: none; }
+  .navbar-links { gap: 12px; }
+  .navbar-links a.nav-link { font-size: 13px; }
+  .navbar-cta { padding: 8px 12px; font-size: 12px; }
+}
+
+.page-header { background: #F5F7FB; padding: 48px 40px 28px; }
+.page-title { font-size: 30px; font-weight: 800; color: #1a1a1a; line-height: 1.35; }
+.page-accent { color: #0D2B6B; }
+.page-count { font-size: 17px; font-weight: 400; color: #999; margin-left: 6px; }
+.page-sub { margin-top: 12px; font-size: 14px; color: #666; line-height: 1.8; }
+
+.search-wrap { padding: 24px 40px 0; background: #F5F7FB; }
+.center-search {
+  width: 100%; max-width: 440px; padding: 12px 16px; border-radius: 10px;
+  border: 1.5px solid #cfd7e8; font-size: 14px; font-family: 'Noto Sans KR', sans-serif;
+  outline: none; background: #fff;
+}
+.center-search:focus { border-color: #0D2B6B; }
+
+.chip-row { display: flex; gap: 8px; flex-wrap: wrap; padding: 20px 40px 32px; background: #F5F7FB; }
+.region-chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 7px 16px; border-radius: 18px;
+  background: #fff; border: 1.5px solid #E0E6F0; color: #444; font-size: 13px; font-weight: 500;
+  text-decoration: none; transition: all 0.2s;
+}
+.region-chip:hover { background: #0D2B6B; color: #fff; border-color: #0D2B6B; }
+.region-chip span { color: #999; font-size: 11px; }
+.region-chip:hover span { color: rgba(255,255,255,0.7); }
+
+.centers-main { padding: 40px 40px 20px; }
+.center-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.center-card { min-height: 200px; scroll-margin-top: 70px; }
+.card-front {
+  width: 100%; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;
+  background: #fff; border: 1px solid #E0E6F0; border-radius: 12px; padding: 18px 18px;
+  transition: box-shadow 0.2s;
+}
+.center-card:hover .card-front { box-shadow: 0 4px 16px rgba(13,43,107,0.10); }
+.card-top-row { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-bottom: 8px; flex-wrap: wrap; }
+.center-brand {
+  display: inline-block; font-size: 12px; font-weight: 700; padding: 6px 12px; border-radius: 14px;
+  background: #E8EFFE; color: #0D2B6B;
+}
+.center-name { font-size: 18px; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; }
+.center-reg { font-size: 12.5px; color: #999; line-height: 1.5; margin-bottom: 10px; }
+.center-addr.filled { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 4px; }
+.dong-tag { font-size: 12px; background: #F0F4FF; color: #0D2B6B; padding: 4px 10px; border-radius: 10px; font-weight: 500; }
+.dong-tag.dong-more { background: #F5F5F5; color: #888; }
+
+.school-details { margin-top: 10px; }
+.school-details summary {
+  cursor: pointer; list-style: none; font-size: 13px; font-weight: 700; color: #0D2B6B;
+  padding: 8px 0; display: flex; align-items: center; gap: 6px;
+}
+.school-details summary::-webkit-details-marker { display: none; }
+.school-details summary::before { content: '▸'; font-size: 11px; }
+.school-details[open] summary::before { content: '▾'; }
+.school-type-group { margin-top: 10px; margin-bottom: 10px; }
+.school-type-label { font-size: 12px; font-weight: 700; color: #0D2B6B; margin-bottom: 6px; }
+.school-list { display: flex; flex-wrap: wrap; gap: 6px; }
+.school-item { font-size: 12px; padding: 5px 9px; border-radius: 7px; background: #F8F6F0; border: 1px solid #E5E1D8; color: #333; }
+
+.detail-btn {
+  margin-top: 14px; width: 100%; box-sizing: border-box;
+  background: #0D2B6B; color: #fff; font-size: 14px; font-weight: 700;
+  padding: 12px 16px; border-radius: 10px; text-decoration: none;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  font-family: 'Noto Sans KR', sans-serif; transition: background 0.2s;
+}
+.detail-btn:hover { background: #0a2054; }
+.detail-btn i { font-size: 13px; }
+
+.no-result { display: none; text-align: center; padding: 60px 20px; color: #999; font-size: 14px; }
+
+.cta-section { background: #FFF3E0; padding: 48px 40px; text-align: center; }
+.cta-section h2 { font-size: 20px; font-weight: 700; color: #1a1a1a; margin-bottom: 10px; }
+.cta-section p { font-size: 14px; color: rgba(0,0,0,0.6); margin-bottom: 24px; line-height: 1.8; }
+.btn-primary {
+  background: #FFB400; color: #0D2B6B; border: none;
+  padding: 14px 30px; border-radius: 8px; font-size: 15px; font-weight: 700;
+  cursor: pointer; font-family: 'Noto Sans KR', sans-serif;
+  text-decoration: none; display: inline-block;
+}
+
+.footer { background: #0D1C3B; color: rgba(255,255,255,0.6); padding: 40px; font-size: 13px; line-height: 1.9; }
+.footer strong { color: rgba(255,255,255,0.9); font-size: 16px; display: block; margin-bottom: 10px; }
+
+.floating-btn {
+  position: fixed; bottom: 28px; right: 24px;
+  background: #FFB400; color: #0D2B6B; font-weight: 700; font-size: 14px;
+  padding: 14px 22px; border-radius: 30px; border: none; cursor: pointer;
+  font-family: 'Noto Sans KR', sans-serif; box-shadow: 0 4px 16px rgba(255,180,0,0.4);
+  display: flex; align-items: center; gap: 8px; z-index: 999;
+  text-decoration: none; transition: transform 0.2s;
+}
+.floating-btn:hover { transform: translateY(-2px); }
+
+.top-btn {
+  position: fixed; bottom: 28px; left: 24px;
+  width: 46px; height: 46px; border-radius: 50%;
+  background: #0D2B6B; color: #fff; border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; font-size: 18px;
+  box-shadow: 0 4px 16px rgba(13,43,107,0.35); z-index: 999;
+  opacity: 0; pointer-events: none; transform: translateY(10px);
+  transition: opacity 0.25s, transform 0.25s;
+}
+.top-btn.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+
+@media (max-width: 600px) {
+  .page-header { padding: 36px 20px 22px; }
+  .page-title { font-size: 22px; }
+  .page-count { font-size: 14px; }
+  .search-wrap, .chip-row, .centers-main, .cta-section { padding-left: 20px; padding-right: 20px; }
+  .footer { padding: 32px 20px; }
+  .center-grid { grid-template-columns: 1fr; }
+}
+
+.school-details-btn {
+  margin-top: 10px; cursor: pointer; background: none; border: none; padding: 8px 0;
+  font-size: 13px; font-weight: 700; color: #0D2B6B; display: flex; align-items: center; gap: 6px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.school-details-btn i { font-size: 11px; }
+
+.school-backdrop {
+  display: none; position: fixed; inset: 0; background: rgba(13,29,64,0.5); z-index: 1100;
+}
+.school-backdrop.show { display: block; }
+.school-modal {
+  display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 90%; max-width: 480px; max-height: 82vh; overflow-y: auto;
+  background: #fff; border-radius: 14px; padding: 24px 22px; z-index: 1200;
+  box-shadow: 0 16px 44px rgba(0,0,0,0.28);
+}
+.school-modal.show { display: block; }
+.school-modal-close {
+  position: absolute; top: 12px; right: 14px; background: none; border: none;
+  font-size: 22px; line-height: 1; color: #999; cursor: pointer; padding: 4px;
+}
+.school-modal-title { font-size: 17px; font-weight: 700; color: #0D2B6B; margin-bottom: 4px; padding-right: 24px; }
+.school-modal-count { font-size: 13px; color: #999; margin-bottom: 4px; }
+.school-modal-hint { font-size: 12px; color: #0D2B6B; background: #F0F6FF; border-radius: 8px; padding: 8px 10px; margin-bottom: 14px; line-height: 1.6; }
+.school-modal-search {
+  width: 100%; padding: 9px 12px; border-radius: 8px; margin-bottom: 14px;
+  border: 1.5px solid #ddd6c8; font-size: 13px; font-family: 'Noto Sans KR', sans-serif; outline: none;
+}
+.school-modal-search:focus { border-color: #0D2B6B; }
+.dong-chip-row { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 14px; }
+.dong-chip {
+  font-size: 11.5px; padding: 5px 10px; border-radius: 12px; cursor: pointer;
+  background: #F0F4FF; border: 1px solid #DCE4F5; color: #0D2B6B; font-family: 'Noto Sans KR', sans-serif;
+}
+.dong-chip.active { background: #0D2B6B; color: #fff; border-color: #0D2B6B; }
+.school-empty { font-size: 13px; color: #999; text-align: center; padding: 20px 0; }
+
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><img src="favicon.svg" alt="대전 전과목 일대일 과외"><span>대전 전과목 일대일 과외</span></a>
+  <div class="navbar-links">
+    <a href="index.html" class="nav-link">홈</a>
+    <a href="index.html#about" class="nav-link">수업 방식</a>
+    <a href="daejeon-regions.html" class="nav-link active">지역별 과외 안내</a>
+    <a href="daejeon-academy-finder.html" class="nav-link">대전 학원 찾기</a>
+    <a href="검정고시-과외.html" class="nav-link">검정고시 과외</a>
+    <a href="국제학교-과외.html" class="nav-link">국제학교 과외</a>
+    <a href="news.html" class="nav-link">입시뉴스</a>
+    <a href="reviews.html" class="nav-link">후기</a>
+  </div>
+  <a href="consult.html" class="navbar-cta">상담신청</a>
+</nav>
+
+<div class="page-header">
+  <h1 class="page-title">대전 <span class="page-accent">지역별</span> 과외 안내<span class="page-count">(5개 구)</span></h1>
+  <p class="page-sub">대전광역시 전 지역(5개 구) 어디서나 일대일 맞춤 과외 매칭이 가능합니다. 비대면 화상 수업은 전 지역 동일하게 진행되며, 대면 방문 수업은 지역별 선생님 배정 상황에 따라 달라질 수 있습니다.</p>
+</div>
+
+<div class="search-wrap">
+  <input type="text" id="centerSearch" class="center-search" placeholder="구 이름으로 검색 (예: 유성구)" oninput="filterCenters(this.value)">
+</div>
+
+<div class="chip-row">
+    <a href="#card-대덕구" class="region-chip">대덕구</a>
+    <a href="#card-동구" class="region-chip">동구</a>
+    <a href="#card-서구" class="region-chip">서구</a>
+    <a href="#card-유성구" class="region-chip">유성구</a>
+    <a href="#card-중구" class="region-chip">중구</a>
+</div>
+
+<div class="centers-main">
+  <div class="center-grid" id="centerGrid">
+    <div id="card-대덕구" class="center-card" data-name="대덕구" data-search="대덕구 대전 대덕구 과외 대전 대덕구 수학과외 대전 대덕구 영어과외 대전 대덕구 국어과외 대전 대덕구 과학과외 대전 대덕구 사회과외 대전 대덕구 일대일과외 대전 대덕구 비대면과외 대전 대덕구 방문과외 대양초등학교 대화초등학교 동도초등학교 동산초등학교 매봉초등학교 목상초등학교 법동초등학교 비래초등학교 새여울초등학교 석봉초등학교 대전송촌초등학교 양지초등학교 중리초등학교 중원초등학교 화정초등학교 새일초등학교 신탄진용정초등학교 신탄진초등학교 와동초등학교 장동초등학교 회덕초등학교 경덕중학교 대전대청중학교 대전대화중학교 대전매봉중학교 대전법동중학교 대전송촌중학교 대전용전중학교 신탄중앙중학교 신탄진중학교 오정중학교 중리중학교 회덕중학교 대전생활과학고등학교 대전송촌고등학교 대전이문고등학교 동대전고등학교 신탄진고등학교">
+      <div class="card-front">
+        <div class="card-top-row">
+          <div class="center-brand brand-wawa">대전 대덕구</div>
+        </div>
+        <div class="center-name">대전광역시 대덕구</div>
+        <div class="center-reg">관할 학교 38개 기준 서비스 가능 지역</div>
+        <button type="button" class="school-details-btn" onclick="openRegionModal('대전광역시|대덕구')"><i class="ti ti-chevron-right"></i> 이 지역 학교 목록 보기</button>
+        <a href="consult.html" class="detail-btn"><i class="ti ti-message-circle-2"></i> 이 지역 과외 상담 신청</a>
+      </div>
+    </div>
+    <div id="card-동구" class="center-card" data-name="동구" data-search="동구 대전 동구 과외 대전 동구 수학과외 대전 동구 영어과외 대전 동구 국어과외 대전 동구 과학과외 대전 동구 사회과외 대전 동구 일대일과외 대전 동구 비대면과외 대전 동구 방문과외 가양초등학교 가오초등학교 대동초등학교 대룡초등학교 대암초등학교 동광초등학교 동서초등학교 삼성초등학교 성남초등학교 신흥초등학교 용운초등학교 용전초등학교 은어송초등학교 자양초등학교 천동초등학교 판암초등학교 현암초등학교 흥룡초등학교 동대전초등학교 동명초등학교 산내초등학교 산흥초등학교 세천초등학교 대전가양중학교 대전가오중학교 대전대성여자중학교 대전용운중학교 대전은어송중학교 동대전중학교 동신중학교 보문중학교 우송중학교 충남중학교 한밭여자중학교 한밭중학교 계룡디지텍고등학교 대전가오고등학교 대전대성여자고등학교 대전동신과학고등학교 대전여자고등학교 동아마이스터고등학교 명석고등학교 보문고등학교 우송고등학교">
+      <div class="card-front">
+        <div class="card-top-row">
+          <div class="center-brand brand-wawa">대전 동구</div>
+        </div>
+        <div class="center-name">대전광역시 동구</div>
+        <div class="center-reg">관할 학교 44개 기준 서비스 가능 지역</div>
+        <button type="button" class="school-details-btn" onclick="openRegionModal('대전광역시|동구')"><i class="ti ti-chevron-right"></i> 이 지역 학교 목록 보기</button>
+        <a href="consult.html" class="detail-btn"><i class="ti ti-message-circle-2"></i> 이 지역 과외 상담 신청</a>
+      </div>
+    </div>
+    <div id="card-서구" class="center-card" data-name="서구" data-search="서구 대전 서구 과외 대전 서구 수학과외 대전 서구 영어과외 대전 서구 국어과외 대전 서구 과학과외 대전 서구 사회과외 대전 서구 일대일과외 대전 서구 비대면과외 대전 서구 방문과외 가수원초등학교 기성초등학교 가장초등학교 갈마초등학교 갑천초등학교 관저초등학교 구봉초등학교 금동초등학교 내동초등학교 느리울초등학교 도마초등학교 도솔초등학교 도안초등학교 둔산초등학교 둔원초등학교 둔천초등학교 만년초등학교 문정초등학교 백운초등학교 변동초등학교 복수초등학교 봉산초등학교 삼육초등학교 삼천초등학교 샘머리초등학교 서부초등학교 서원초등학교 선암초등학교 대전선유초등학교 성룡초등학교 성천초등학교 수미초등학교 신계초등학교 원앙초등학교 월평초등학교 유천초등학교 정림초등학교 탄방초등학교 호수초등학교 한밭초등학교 흥도초등학교 가수원중학교 갈마중학교 기성중학교 대전갑천중학교 대전관저중학교 대전괴정중학교 대전구봉중학교 대전남선중학교 대전내동중학교 대전느리울중학교 대전대신중학교 대전도마중학교 대전도안중학교 대전둔산중학교 대전둔원중학교 대전만년중학교 대전문정중학교 대전버드내중학교 대전변동중학교 대전봉산중학교 대전봉우중학교 대전삼육중학교 대전삼천중학교 대전서중학교 대전신계중학교 대전월평중학교 대전정림중학교 대전탄방중학교 동방여자중학교 대전관저고등학교 대전괴정고등학교 대전구봉고등학교 대전대신고등학교 대전둔산여자고등학교 대전둔원고등학교 대전만년고등학교 대전복수고등학교 대전외국어고등학교 대전제일고등학교 동방고등학교 서대전고등학교 서대전여자고등학교 서일고등학교 서일여자고등학교 충남고등학교 한밭고등학교">
+      <div class="card-front">
+        <div class="card-top-row">
+          <div class="center-brand brand-wawa">대전 서구</div>
+        </div>
+        <div class="center-name">대전광역시 서구</div>
+        <div class="center-reg">관할 학교 87개 기준 서비스 가능 지역</div>
+        <button type="button" class="school-details-btn" onclick="openRegionModal('대전광역시|서구')"><i class="ti ti-chevron-right"></i> 이 지역 학교 목록 보기</button>
+        <a href="consult.html" class="detail-btn"><i class="ti ti-message-circle-2"></i> 이 지역 과외 상담 신청</a>
+      </div>
+    </div>
+    <div id="card-유성구" class="center-card" data-name="유성구" data-search="유성구 대전 유성구 과외 대전 유성구 수학과외 대전 유성구 영어과외 대전 유성구 국어과외 대전 유성구 과학과외 대전 유성구 사회과외 대전 유성구 일대일과외 대전 유성구 비대면과외 대전 유성구 방문과외 구즉초등학교 금성초등학교 남선초등학교 대덕초등학교 계산초등학교 대전관평초등학교 교촌초등학교 대전노은초등학교 대정초등학교 대전동화초등학교 두리초등학교 둔곡초등학교 대전반석초등학교 배울초등학교 복용초등학교 봉명초등학교 상대초등학교 상원초등학교 대전상지초등학교 대전새미래초등학교 송강초등학교 송림초등학교 대전수정초등학교 어은초등학교 용산초등학교 원신흥초등학교 자운초등학교 장대초등학교 전민초등학교 죽동초등학교 대전지족초등학교 하기초등학교 덕송초등학교 문지초등학교 봉암초등학교 외삼초등학교 유성초등학교 진잠초등학교 학하초등학교 대덕중학교 대전관평중학교 대전노은중학교 대전덕명중학교 대전동화중학교 대전두리중학교 대전둔곡중학교 대전문지중학교 대전봉명중학교 대전새미래중학교 대전송강중학교 대전어은중학교 대전외삼중학교 대전원신흥중학교 대전자운중학교 대전장대중학교 대전전민중학교 대전지족중학교 대전체육중학교 대전하기중학교 성덕중학교 유성중학교 진잠중학교 대덕고등학교 대덕소프트웨어마이스터고등학교 대전과학고등학교 대전노은고등학교 대전도시과학고등학교 대전도안고등학교 대전반석고등학교 대전예술고등학교 대전용산고등학교 대전전민고등학교 대전전자디자인고등학교 대전지족고등학교 대전체육고등학교 유성고등학교 유성생명과학고등학교 유성여자고등학교 중일고등학교">
+      <div class="card-front">
+        <div class="card-top-row">
+          <div class="center-brand brand-wawa">대전 유성구</div>
+        </div>
+        <div class="center-name">대전광역시 유성구</div>
+        <div class="center-reg">관할 학교 79개 기준 서비스 가능 지역</div>
+        <button type="button" class="school-details-btn" onclick="openRegionModal('대전광역시|유성구')"><i class="ti ti-chevron-right"></i> 이 지역 학교 목록 보기</button>
+        <a href="consult.html" class="detail-btn"><i class="ti ti-message-circle-2"></i> 이 지역 과외 상담 신청</a>
+      </div>
+    </div>
+    <div id="card-중구" class="center-card" data-name="중구" data-search="중구 대전 중구 과외 대전 중구 수학과외 대전 중구 영어과외 대전 중구 국어과외 대전 중구 과학과외 대전 중구 사회과외 대전 중구 일대일과외 대전 중구 비대면과외 대전 중구 방문과외 글꽃초등학교 대문초등학교 대신초등학교 대흥초등학교 동문초등학교 목동초등학교 목양초등학교 문성초등학교 문창초등학교 문화초등학교 대전버드내초등학교 보성초등학교 보운초등학교 산성초등학교 석교초등학교 선화초등학교 성모초등학교 신평초등학교 오류초등학교 옥계초등학교 원평초등학교 유평초등학교 중앙초등학교 중촌초등학교 태평초등학교 산서초등학교 서대전초등학교 대전글꽃중학교 대전대문중학교 대전대성중학교 대전동산중학교 대전문화여자중학교 대전신일중학교 대전여자중학교 대전중앙중학교 대전중학교 대전태평중학교 동명중학교 청란여자중학교 충남여자중학교 호수돈여자중학교 남대전고등학교 대전고등학교 대전대성고등학교 대전국제통상고등학교 대전동산고등학교 대전성모여자고등학교 대전신일여자고등학교 대전여자상업고등학교 대전중앙고등학교 대전한빛고등학교 청란여자고등학교 충남기계공업고등학교 충남여자고등학교 호수돈여자고등학교">
+      <div class="card-front">
+        <div class="card-top-row">
+          <div class="center-brand brand-wawa">대전 중구</div>
+        </div>
+        <div class="center-name">대전광역시 중구</div>
+        <div class="center-reg">관할 학교 55개 기준 서비스 가능 지역</div>
+        <button type="button" class="school-details-btn" onclick="openRegionModal('대전광역시|중구')"><i class="ti ti-chevron-right"></i> 이 지역 학교 목록 보기</button>
+        <a href="consult.html" class="detail-btn"><i class="ti ti-message-circle-2"></i> 이 지역 과외 상담 신청</a>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="no-result" id="noResult">검색 결과가 없습니다.</div>
+</div>
+
+<section class="cta-section">
+  <h2>우리 동네 과외 선생님이 궁금하다면</h2>
+  <p>학생 학년·희망 과목·거주 지역을 남겨주시면 담당 매니저가 바로 안내해드립니다.</p>
+  <a href="consult.html" class="btn-primary">무료 매칭 상담 신청</a>
+</section>
+
+<footer class="footer">
+  <strong>동화세상에듀코원격평생교육학원</strong>
+  (주)동화세상에듀코 | 사업자등록번호 : 201-81-27348 (통신판매업 신고번호 동대문 제0409호) | 대표자 : 김영철 | 대표전화 : 1899-2277<br>
+  (02580) 서울특별시 동대문구 왕산로 25 (신설동 89-79) 동화세상에듀코 빌딩<br><br>
+  © 2026 (주)동화세상에듀코. All rights reserved.
+</footer>
+
+<a href="https://open.kakao.com/o/sJ7JrYwi" target="_blank" rel="noopener" class="floating-btn">
+  <i class="ti ti-message-circle"></i> 카카오톡 상담
+</a>
+
+<button class="top-btn" id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="맨 위로">
+  <i class="ti ti-arrow-up"></i>
+</button>
+<script>
+  (function() {
+    var btn = document.getElementById('topBtn');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 400) { btn.classList.add('show'); }
+      else { btn.classList.remove('show'); }
+    });
+  })();
+</script>
+
+<script>
+function filterCenters(q) {
+  q = q.trim();
+  var cards = document.querySelectorAll('.center-card');
+  var visibleCount = 0;
+  cards.forEach(function(card) {
+    var haystack = card.dataset.name + ' ' + (card.dataset.search || '');
+    var match = !q || haystack.indexOf(q) !== -1;
+    card.style.display = match ? '' : 'none';
+    if (match) visibleCount++;
+  });
+  document.getElementById('noResult').style.display = visibleCount === 0 ? 'block' : 'none';
+}
+
+(function() {
+  var q = new URLSearchParams(location.search).get('q');
+  if (q) {
+    var input = document.getElementById('centerSearch');
+    input.value = q;
+    filterCenters(q);
+  }
+})();
+</script>
+
+
+<div class="school-backdrop" id="schoolBackdrop" onclick="closeRegionModal()"></div>
+<div class="school-modal" id="schoolModal" onclick="event.stopPropagation()">
+  <button class="school-modal-close" onclick="closeRegionModal()" aria-label="닫기">&times;</button>
+  <div class="school-modal-title" id="schoolModalTitle"></div>
+  <div class="school-modal-count" id="schoolModalCount"></div>
+  <div class="school-modal-hint" id="schoolModalHint"></div>
+  <input type="text" class="school-modal-search" id="schoolModalSearch" placeholder="학교명, 동 검색 (예: 둔산동 한밭초)" oninput="renderSchoolModal()">
+  <div class="dong-chip-row" id="schoolModalDongRow"></div>
+  <div id="schoolModalBody"></div>
+</div>
+
+<script>
+  var TYPE_LABELS = { e: '초등학교', m: '중학교', h: '고등학교', o: '특수·기타학교' };
+  var currentSchoolKey = null;
+  var currentDongFilter = null;
+
+  var SUBJECTS = ['국어','영어','수학','과학','사회'];
+  function hashKey(s) {
+    var h = 0;
+    for (var i = 0; i < s.length; i++) { h = (h * 31 + s.charCodeAt(i)) % 997; }
+    return h;
+  }
+
+  function openRegionModal(key) {
+    currentSchoolKey = key;
+    currentDongFilter = null;
+    var parts = key.split('|');
+    document.getElementById('schoolModalTitle').textContent = parts[0].replace(/\([^)]*\)/,'') + ' ' + parts[1];
+    document.getElementById('schoolModalSearch').value = '';
+    var dongList = getCurrentList().map(function(s) { return s.d; }).filter(function(d, i, arr) { return d && arr.indexOf(d) === i; });
+    var hintEl = document.getElementById('schoolModalHint');
+    if (dongList.length) {
+      var h = hashKey(key);
+      var d1 = dongList[0], d2 = dongList[Math.min(1, dongList.length - 1)];
+      var s1 = SUBJECTS[h % 5], s2 = SUBJECTS[(h + 2) % 5];
+      hintEl.textContent = '💬 ' + d1 + ' ' + s1 + ' 과외, ' + d2 + ' ' + s2 + ' 과외 등 ' + parts[1] + ' 전 지역에서 과목별 맞춤 과외 매칭이 가능합니다.';
+    } else {
+      hintEl.textContent = '';
+    }
+    renderDongChips();
+    renderSchoolModal();
+    document.getElementById('schoolModal').classList.add('show');
+    document.getElementById('schoolBackdrop').classList.add('show');
+  }
+  function closeRegionModal() {
+    document.getElementById('schoolModal').classList.remove('show');
+    document.getElementById('schoolBackdrop').classList.remove('show');
+  }
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeRegionModal(); });
+
+  function getCurrentList() {
+    var raw = (window.SCHOOL_DATA || {})[currentSchoolKey] || [];
+    return Array.isArray(raw) ? raw : [];
+  }
+
+  function renderDongChips() {
+    var list = getCurrentList();
+    var dongs = [];
+    var seen = {};
+    list.forEach(function(s) {
+      if (s.d && !seen[s.d]) { seen[s.d] = true; dongs.push(s.d); }
+    });
+    dongs.sort();
+    var rowEl = document.getElementById('schoolModalDongRow');
+    if (!dongs.length) { rowEl.innerHTML = ''; return; }
+    var html = '<span class="dong-chip' + (currentDongFilter === null ? ' active' : '') + '" onclick="setDongFilter(null)">전체</span>';
+    dongs.forEach(function(d) {
+      html += '<span class="dong-chip' + (currentDongFilter === d ? ' active' : '') + '" onclick="setDongFilter(\'' + d.replace(/'/g, "\\'") + '\')">' + d + '</span>';
+    });
+    rowEl.innerHTML = html;
+  }
+  function setDongFilter(d) {
+    currentDongFilter = d;
+    renderDongChips();
+    renderSchoolModal();
+  }
+
+  function renderSchoolModal() {
+    if (!currentSchoolKey) return;
+    var list = getCurrentList();
+    if (currentDongFilter) list = list.filter(function(s) { return s.d === currentDongFilter; });
+    var q = document.getElementById('schoolModalSearch').value.trim();
+    if (q) {
+      var terms = q.split(/\s+/).filter(Boolean);
+      list = list.filter(function(s) {
+        return terms.every(function(term) {
+          return s.n.indexOf(term) !== -1 || (s.d && s.d.indexOf(term) !== -1);
+        });
+      });
+    }
+    document.getElementById('schoolModalCount').textContent = '전체 ' + list.length + '개교';
+    var byType = { e: [], m: [], h: [], o: [] };
+    list.forEach(function(s) { (byType[s.t] || byType.o).push(s); });
+    var bodyEl = document.getElementById('schoolModalBody');
+    var html = '';
+    var anyShown = false;
+    ['e','m','h','o'].forEach(function(tc) {
+      var items = byType[tc];
+      if (!items.length) return;
+      anyShown = true;
+      html += '<div class="school-type-group"><div class="school-type-label">' + TYPE_LABELS[tc] + ' (' + items.length + ')</div><div class="school-list">';
+      items.forEach(function(s) { html += '<span class="school-item">' + s.n + (s.d ? ' <span style="color:#999">· ' + s.d + '</span>' : '') + '</span>'; });
+      html += '</div></div>';
+    });
+    if (!anyShown) html = '<div class="school-empty">검색 결과가 없습니다.</div>';
+    bodyEl.innerHTML = html;
+  }
+</script>
+<script src="school-data.js"></script>
+
+</body>
+</html>
